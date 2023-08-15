@@ -1,0 +1,112 @@
+(self.webpackChunk_portal_app_portal_cr=self.webpackChunk_portal_app_portal_cr||[]).push([[30694],{34450:(e,n,t)=>{"use strict";t.d(n,{vb:()=>y,TO:()=>E,am:()=>j,hg:()=>h,eQ:()=>N,MN:()=>m,eC:()=>v,Xj:()=>B,Pc:()=>k,WO:()=>T});var i=t(19681);let a={primary:"light",secondary:"highlight"},r=e=>`
+    position:relative;
+    width: 100%;
+    height: 100%;
+    padding-top: var(--spacers-c24);
+    padding-bottom: var(--spacers-c24);
+    text-align: left;
+
+    border: var(--borders-border-s) solid var(--colors-cards-${a[e]}-enabled-stroke);
+    background-color: var(--colors-cards-${a[e]}-enabled-surface);
+
+    padding-inline-start: var(--spacers-c16);
+    padding-inline-end: var(--spacers-c16);
+
+    transition-property: background-color, border-color, color; 
+    transition-duration: var(--motion-functional-duration-m);
+    transition-timing-function: var(--motion-functional-easing-decelerated);
+
+    ${(0,i.componentSelector)("ImageContainer")} {
+        margin-right: calc(var(--spacers-c16) * -1);
+        margin-left: calc(var(--spacers-c16) * -1);
+    }
+
+    ${(0,i.componentSelector)("Icon")} {
+        color: var(--colors-cards-${a[e]}-enabled-icon);
+    }
+
+    ${(0,i.componentSelector)("InformationCardTitle")},
+    ${(0,i.componentSelector)("InformationCardDescription")} {
+        color: var(--colors-cards-${a[e]}-enabled-text);
+    }
+
+    ${(0,i.componentSelector)("BlockAction")} {
+        background-color: var(--colors-cards-${a[e]}-enabled-surface);
+        &::after {
+            mix-blend-mode: multiply;
+            background-color: transparent;
+            transition-property: background-color; 
+            transition-duration: var(--motion-functional-duration-m);
+            transition-timing-function: var(--motion-functional-easing-decelerated);
+        }
+    }
+
+    &:hover {
+        ${(0,i.componentSelector)("Icon")} {
+            color: var(--colors-cards-${a[e]}-hover-icon);
+        }
+        ${(0,i.componentSelector)("ImageCardTitle")},
+        ${(0,i.componentSelector)("ImageCardDescription")},
+        ${(0,i.componentSelector)("ImageCardFooter")} {
+            color: var(--colors-cards-${a[e]}-hover-text);
+        }
+        
+        ${(0,i.componentSelector)("BlockAction")}::after {
+            background-color: var(--colors-cards-${a[e]}-hover-surface);
+        }
+    }
+        
+`;var o=t(52903),s=t(99738),l=t(2784);let d=(0,l.forwardRef)(({children:e,as:n="article",...t},i)=>(0,o.jsx)(s.Stack,{gap:"c16",ref:i,as:n,...t,children:e}));d.displayName="BaseInformationCard";var c=t(52248);let u=(0,c.default)(d)`
+    ${r("primary")}
+`,m=(0,i.withIdentifier)(u,"InformationCardPrimary"),f=(0,c.default)(d)`
+    ${r("secondary")}
+`,v=(0,i.withIdentifier)(f,"InformationCardSecondary"),p=(0,c.default)(d)`
+    width: 100%;
+    height: 100%;
+    padding-top: var(--spacers-c24);
+    padding-bottom: var(--spacers-c24);
+    ${(0,i.componentSelector)("Icon")} {
+        color: var(--colors-cards-light-enabled-icon);
+    }
+    ${(0,i.componentSelector)("InformationCardTitle")},
+    ${(0,i.componentSelector)("InformationCardDescription")} {
+        color: var(--colors-cards-highlight-enabled-text);
+    }
+`,k=(0,i.withIdentifier)(p,"InformationCardTertiary"),g=(0,c.default)(s.Stack)``;g.defaultProps={gap:"c16"};let h=(0,i.withIdentifier)(g,"InformationCardHeader"),b=(0,c.default)(s.Stack)``;b.defaultProps={gap:"c16"};let y=(0,i.withIdentifier)(b,"InformationCardContent");var S=t(13036);let x=c.default.div`
+    margin-top: auto;
+    ${S.footnoteStyles}
+    color: var(--colors-cards-light-enabled-text);
+
+    a {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            min-width: 4.4rem;
+            min-height: 4.4rem;
+            transform: translate(-50%, -50%);
+        }
+    }
+`,j=(0,i.withIdentifier)(x,"InformationCardFooter");var I=t(99550);let w=(0,c.default)(I.W2)`
+    max-width: none;
+    margin-top: calc(-1 * var(--spacers-c24));
+`,C=(0,i.withIdentifier)(w,"ImageContainer"),O=({alt:e,width:n,height:t,src:i,...a})=>(0,o.jsx)(I.Ei,{alt:e,width:n,height:t,src:i,...a,container:C}),N=(0,i.withIdentifier)(O,"InformationCardImage"),$=c.default.h1`
+    ${S.kickerStyles}
+    margin: 0;
+    font-weight: normal;
+`,T=(0,i.withIdentifier)($,"InformationCardTitle"),E=(0,i.withIdentifier)(S.Body,"InformationCardDescription");var F=t(96919);let D=(0,c.default)(F.default)`
+    width: 100%;
+    height: 100%;
+    padding-top: var(--spacers-c24);
+    padding-bottom: var(--spacers-c24);
+    padding-inline-start: var(--spacers-c16);
+    padding-inline-end: var(--spacers-c16);
+`,B=(0,i.withIdentifier)(D,"InformationCardSkeleton")},5036:e=>{var n={kind:"Document",definitions:[{kind:"FragmentDefinition",name:{kind:"Name",value:"ConsciousTotalCount"},typeCondition:{kind:"NamedType",name:{kind:"Name",value:"Consciousness"}},directives:[],selectionSet:{kind:"SelectionSet",selections:[{kind:"Field",name:{kind:"Name",value:"attributes"},arguments:[],directives:[],selectionSet:{kind:"SelectionSet",selections:[{kind:"Field",name:{kind:"Name",value:"totalCount"},arguments:[],directives:[]}]}}]}}],loc:{start:0,end:69}};n.loc.source={body:"fragment ConsciousTotalCount on Consciousness{attributes{totalCount}}",name:"GraphQL request",locationOffset:{line:1,column:1}};var t={};function i(e,n){if("FragmentSpread"===e.kind)n.add(e.name.value);else if("VariableDefinition"===e.kind){var t=e.type;"NamedType"===t.kind&&n.add(t.name.value)}e.selectionSet&&e.selectionSet.selections.forEach(function(e){i(e,n)}),e.variableDefinitions&&e.variableDefinitions.forEach(function(e){i(e,n)}),e.definitions&&e.definitions.forEach(function(e){i(e,n)})}var a={};function r(e,n){for(var t=0;t<e.definitions.length;t++){var i=e.definitions[t];if(i.name&&i.name.value==n)return i}}function o(e,n){var t={kind:e.kind,definitions:[r(e,n)]};e.hasOwnProperty("loc")&&(t.loc=e.loc);var i=a[n]||new Set,o=new Set,s=new Set;for(i.forEach(function(e){s.add(e)});s.size>0;){var l=s;s=new Set,l.forEach(function(e){o.has(e)||(o.add(e),(a[e]||new Set).forEach(function(e){s.add(e)}))})}return o.forEach(function(n){var i=r(e,n);i&&t.definitions.push(i)}),t}n.definitions.forEach(function(e){if(e.name){var n=new Set;i(e,n),a[e.name.value]=n}}),e.exports=n,e.exports.ConsciousTotalCount=o(n,"ConsciousTotalCount")},25019:(e,n,t)=>{var i={kind:"Document",definitions:[{kind:"OperationDefinition",operation:"query",name:{kind:"Name",value:"ConsciousEligibility"},variableDefinitions:[{kind:"VariableDefinition",variable:{kind:"Variable",name:{kind:"Name",value:"productId"}},type:{kind:"NonNullType",type:{kind:"NamedType",name:{kind:"Name",value:"ID"}}},directives:[]},{kind:"VariableDefinition",variable:{kind:"Variable",name:{kind:"Name",value:"variationId"}},type:{kind:"NamedType",name:{kind:"Name",value:"ID"}},directives:[]},{kind:"VariableDefinition",variable:{kind:"Variable",name:{kind:"Name",value:"sizeId"}},type:{kind:"NamedType",name:{kind:"Name",value:"ID"}},directives:[]},{kind:"VariableDefinition",variable:{kind:"Variable",name:{kind:"Name",value:"merchantId"}},type:{kind:"NamedType",name:{kind:"Name",value:"ID"}},directives:[]}],directives:[],selectionSet:{kind:"SelectionSet",selections:[{kind:"Field",name:{kind:"Name",value:"variation"},arguments:[{kind:"Argument",name:{kind:"Name",value:"productId"},value:{kind:"Variable",name:{kind:"Name",value:"productId"}}},{kind:"Argument",name:{kind:"Name",value:"variationId"},value:{kind:"Variable",name:{kind:"Name",value:"variationId"}}},{kind:"Argument",name:{kind:"Name",value:"sizeId"},value:{kind:"Variable",name:{kind:"Name",value:"sizeId"}}},{kind:"Argument",name:{kind:"Name",value:"merchantId"},value:{kind:"Variable",name:{kind:"Name",value:"merchantId"}}}],directives:[],selectionSet:{kind:"SelectionSet",selections:[{kind:"InlineFragment",typeCondition:{kind:"NamedType",name:{kind:"Name",value:"Variation"}},directives:[],selectionSet:{kind:"SelectionSet",selections:[{kind:"Field",name:{kind:"Name",value:"id"},arguments:[],directives:[]},{kind:"Field",name:{kind:"Name",value:"sustainability"},arguments:[],directives:[],selectionSet:{kind:"SelectionSet",selections:[{kind:"Field",name:{kind:"Name",value:"consciousness"},arguments:[],directives:[],selectionSet:{kind:"SelectionSet",selections:[{kind:"FragmentSpread",name:{kind:"Name",value:"ConsciousTotalCount"},directives:[]}]}}]}}]}},{kind:"InlineFragment",typeCondition:{kind:"NamedType",name:{kind:"Name",value:"VariationUnavailable"}},directives:[],selectionSet:{kind:"SelectionSet",selections:[{kind:"Field",name:{kind:"Name",value:"product"},arguments:[],directives:[],selectionSet:{kind:"SelectionSet",selections:[{kind:"Field",name:{kind:"Name",value:"id"},arguments:[],directives:[]}]}},{kind:"Field",name:{kind:"Name",value:"sustainability"},arguments:[],directives:[],selectionSet:{kind:"SelectionSet",selections:[{kind:"Field",name:{kind:"Name",value:"consciousness"},arguments:[],directives:[],selectionSet:{kind:"SelectionSet",selections:[{kind:"FragmentSpread",name:{kind:"Name",value:"ConsciousTotalCount"},directives:[]}]}}]}}]}}]}}]}}],loc:{start:0,end:400}};i.loc.source={body:'#import "../fragments/ConsciousTotalCount.fragment.gql"\nquery ConsciousEligibility($productId:ID!$variationId:ID$sizeId:ID$merchantId:ID){variation(productId:$productId variationId:$variationId sizeId:$sizeId merchantId:$merchantId){...on Variation{id sustainability{consciousness{...ConsciousTotalCount}}}...on VariationUnavailable{product{id}sustainability{consciousness{...ConsciousTotalCount}}}}}',name:"GraphQL request",locationOffset:{line:1,column:1}};var a={};function r(e){return e.filter(function(e){if("FragmentDefinition"!==e.kind)return!0;var n=e.name.value;return!a[n]&&(a[n]=!0,!0)})}function o(e,n){if("FragmentSpread"===e.kind)n.add(e.name.value);else if("VariableDefinition"===e.kind){var t=e.type;"NamedType"===t.kind&&n.add(t.name.value)}e.selectionSet&&e.selectionSet.selections.forEach(function(e){o(e,n)}),e.variableDefinitions&&e.variableDefinitions.forEach(function(e){o(e,n)}),e.definitions&&e.definitions.forEach(function(e){o(e,n)})}i.definitions=i.definitions.concat(r(t(5036).definitions));var s={};function l(e,n){for(var t=0;t<e.definitions.length;t++){var i=e.definitions[t];if(i.name&&i.name.value==n)return i}}function d(e,n){var t={kind:e.kind,definitions:[l(e,n)]};e.hasOwnProperty("loc")&&(t.loc=e.loc);var i=s[n]||new Set,a=new Set,r=new Set;for(i.forEach(function(e){r.add(e)});r.size>0;){var o=r;r=new Set,o.forEach(function(e){a.has(e)||(a.add(e),(s[e]||new Set).forEach(function(e){r.add(e)}))})}return a.forEach(function(n){var i=l(e,n);i&&t.definitions.push(i)}),t}i.definitions.forEach(function(e){if(e.name){var n=new Set;o(e,n),s[e.name.value]=n}}),e.exports=i,e.exports.ConsciousEligibility=d(i,"ConsciousEligibility")},76189:(e,n,t)=>{"use strict";t.d(n,{XC:()=>o,T5:()=>r,C_:()=>s,NA:()=>l});var i=t(38939);let a="'second'",r=(0,i.Z)("div",{target:"e16n58wy3"})("display:grid;grid-template-areas:",e=>{let{hasAttributes:n}=e;return n?"'first' 'second'":"'second'"},";grid-template-columns:1fr;column-gap:var(--spacers-c24);row-gap:var(--spacers-c12);@media (",e=>{var n;let{theme:t}=e;return null==t?void 0:null===(n=t.mediaQuery)||void 0===n?void 0:n.sm},"){grid-template-areas:",e=>{let{hasAttributes:n}=e;return n?"'first second'":a},";grid-template-columns:repeat(2, 1fr);column-gap:var(--spacers-l72);}@media (",e=>{var n;let{theme:t}=e;return null==t?void 0:null===(n=t.mediaQuery)||void 0===n?void 0:n.lg},"){grid-template-areas:",e=>{let{hasAttributes:n}=e;return n?"'first second third'":a},";grid-template-columns:repeat(3, 1fr);}"),o=(0,i.Z)("div",{target:"e16n58wy2"})({name:"182wjbq",styles:"grid-area:first"}),s=(0,i.Z)("div",{target:"e16n58wy1"})({name:"15eja7h",styles:"grid-area:second"}),l=(0,i.Z)("div",{target:"e16n58wy0"})({name:"1930kni",styles:"grid-area:third;display:none"})},75141:(e,n,t)=>{"use strict";t.d(n,{O:()=>m});var i=t(28165),a=t(2784),r=t(13036),o=t(99738);let s=()=>(0,i.jsx)("div",null,(0,i.jsx)(o.Stack,{gap:"c8"},(0,i.jsx)(r.BodySkeleton,{width:"80%"}),(0,i.jsx)(o.Stack,{gap:"0"},(0,i.jsx)(r.BodySkeleton,{width:"100%"}),(0,i.jsx)(r.BodySkeleton,{width:"40%"})))),l=()=>(0,i.jsx)("div",null,(0,i.jsx)(o.Stack,{gap:"c8"},(0,i.jsx)(r.BodySkeleton,{width:"50%"}),(0,i.jsx)(o.Stack,{gap:"c8"},(0,i.jsx)(o.Stack,{gap:"0"},(0,i.jsx)(r.BodySkeleton,{width:"100%"}),(0,i.jsx)(r.BodySkeleton,{width:"80%"}),(0,i.jsx)(r.BodySkeleton,{width:"90%"}),(0,i.jsx)(r.BodySkeleton,{width:"100%"}),(0,i.jsx)(r.BodySkeleton,{width:"90%"}),(0,i.jsx)(r.BodySkeleton,{width:"95%"})),(0,i.jsx)(r.BodySkeleton,{width:"70%"}))));var d=t(76189),c=t(19685);let u=()=>(0,i.jsx)(c.QS,null,(0,i.jsx)(c.yR,{style:{width:"16rem",marginRight:"1.2rem"}}),(0,i.jsx)(c.yR,{style:{width:"8rem"}})),m=e=>{let{hasAttributes:n}=e;return(0,i.jsx)(d.T5,{hasAttributes:!!n},n?(0,i.jsx)(d.XC,null,(0,i.jsx)(o.Stack,{gap:"c24"},(0,i.jsx)(s,null),(0,i.jsx)(u,null))):null,(0,i.jsx)(d.C_,null,(0,i.jsx)(l,null)),(0,i.jsx)(d.NA,null))}},26920:(e,n,t)=>{"use strict";t.d(n,{gO:()=>r,jB:()=>o,Et:()=>s,wE:()=>l,c8:()=>a.c8,zB:()=>a.zB,bn:()=>a.bn,me:()=>a.me,rC:()=>a.rC,y$:()=>a.y$,yl:()=>a.yl,cB:()=>d,l4:()=>i});let i="web_pdp_conscious_tab";var a=t(95667);let r="/conscious-criteria",o="/stories",s="/stories/positively-farfetch.aspx",l={MEN:"men",WOMEN:"women",KIDS:"kids",BEAUTY:"beauty"},d=10},91119:(e,n,t)=>{"use strict";t.d(n,{$W:()=>u,Cx:()=>m,E$:()=>d,Kx:()=>l,MV:()=>r,Nj:()=>i,OV:()=>s,YL:()=>c,_l:()=>a,uH:()=>o});let i=3391,a=3392,r=3393,o=3395,s="pdp",l="pdpConsciousModal",d="pdpConsciousTab",c="pdpConsciousModal",u="expand",m="collapse"},95667:(e,n,t)=>{"use strict";t.d(n,{AC:()=>c,bn:()=>a,c8:()=>d,me:()=>s,rC:()=>o,y$:()=>l,yl:()=>i,zB:()=>r});let i="Conscious",a="What makes it Conscious at FARFETCH",r="This item has been awarded our Conscious label as it meets the following criteria:",o="Positively FARFETCH",s="Positively FARFETCH is our mission to become the global platform for good in luxury fashion \u2014 empowering everyone to choose, act and think positively. By shopping conscious items, you\u2019re supporting pioneering brands that have made sustainable values part of their identity.",l="Learn more about Positively FARFETCH",d="Learn more about our Conscious criteria and the certifications we accept",c="Sorry, something went wrong when loading the criteria for this label"},46704:(e,n,t)=>{"use strict";t.d(n,{VY:()=>h,Un:()=>T});var i=t(28165),a=t(2784),r=t(94577),o=t(26920),s=t(13036),l=t(76699);let d=()=>{let{t:e}=(0,l.$)(),n=e("wbt_conscious_tab_title",o.yl);return(0,i.jsx)(s.Kicker,{as:"h2",key:"text"},n)};var c=t(54849),u=t(92725),m=t(25019),f=t.n(m);let v=()=>{var e,n,t;let{isActive:i}=(0,u.SS)(o.l4),{data:a}=(0,c.EV)(),{data:r}=(0,u.FN)(f(),{variables:{productId:a.productId,variationId:a.variationId,merchantId:a.merchantId,sizeId:a.sizeId},errorPolicy:"all",ssr:!1,skip:!i}),s=null==r?void 0:r.variation;return i&&!!(null!=s&&null!==(e=s.sustainability)&&void 0!==e&&null!==(n=e.consciousness)&&void 0!==n&&n.attributes)&&(null===(t=s.sustainability)||void 0===t?void 0:t.consciousness.attributes.totalCount)>=0};var p=t(54152);function k(e){if(null==e)throw TypeError("Cannot destructure "+e)}let g=e=>{let n=Object.assign({},(k(e),e)),t=v();return t?(0,i.jsx)(r.OK,n,(0,i.jsx)(d,null)):null},h=(0,p.P)(g,{fallback:()=>null});var b=t(65536),y=t(75141),S=t(91119),x=t(190);let j=e=>{let n=v(),t=(0,a.useRef)(!1);(0,a.useEffect)(()=>{if(n&&(t.current&&!e||!t.current&&e)){(0,x.Z)({tid:S.Nj,interactionType:e?S.$W:S.Cx,actionArea:S.OV}),t.current=e;return}},[n,e])},I=["index"];function w(){return(w=Object.assign?Object.assign.bind():function(e){for(var n=1;n<arguments.length;n++){var t=arguments[n];for(var i in t)Object.prototype.hasOwnProperty.call(t,i)&&(e[i]=t[i])}return e}).apply(this,arguments)}function C(e,n){if(null==e)return{};var t,i,a=O(e,n);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);for(i=0;i<r.length;i++)t=r[i],!(n.indexOf(t)>=0)&&Object.prototype.propertyIsEnumerable.call(e,t)&&(a[t]=e[t])}return a}function O(e,n){if(null==e)return{};var t,i,a={},r=Object.keys(e);for(i=0;i<r.length;i++)t=r[i],n.indexOf(t)>=0||(a[t]=e[t]);return a}let N=(0,b.Vo)(()=>t.e(54584).then(t.bind(t,54584)),{moduleId:"../../node_modules/@modules/conscious/src/components/Content/index.ts"}),$=e=>{let{index:n}=e,t=C(e,I),a=v(),{selectedIndex:o}=(0,r.Mw)(),s=n===o;return(j(s),a)?(0,i.jsx)(r.x4,w({index:n},t),(0,i.jsx)(p.S,{fallback:y.O},(0,i.jsx)(b.BY,{fallback:(0,i.jsx)(y.O,{hasAttributes:a})},(0,i.jsx)(N,{isOpen:s})))):null},T=(0,p.P)($,{fallback:()=>(0,i.jsx)(y.O,{hasAttributes:!0})});var E=t(5626);let F=(0,b.Vo)(()=>t.e(54584).then(t.bind(t,54584)),{moduleId:"../../node_modules/@modules/conscious/src/components/Content/index.ts"}),D=e=>{let{hasAttributes:n}=e,{isExpanded:t}=(0,E.bB)();return j(t),(0,i.jsx)(E.Hk,null,(0,i.jsx)(p.S,{fallback:y.O},(0,i.jsx)(b.BY,{fallback:(0,i.jsx)(y.O,{hasAttributes:n})},(0,i.jsx)(F,{isOpen:t}))))},B=(0,p.P)(D,{fallback:()=>(0,i.jsx)(y.O,null)}),V=()=>{let{t:e}=(0,l.$)(),n=e("wbt_conscious_tab_title",o.yl);return(0,i.jsx)(a.Fragment,{key:"text"},n)};function P(e){if(null==e)throw TypeError("Cannot destructure "+e)}let _=e=>{let n=Object.assign({},(P(e),e)),t=v();return t?(0,i.jsx)(E.Qd,n,(0,i.jsx)("h2",null,(0,i.jsx)(E.KF,null,(0,i.jsx)(V,null))),(0,i.jsx)(B,{hasAttributes:t})):null};(0,p.P)(_,{fallback:()=>(0,i.jsx)(y.O,null)})},92128:(e,n,t)=>{"use strict";t.d(n,{Z:()=>f});var i=t(38939),a=t(28165),r=t(13036),o=t(34450),s=t(87374),l=t(2784);function d(){return(d=Object.assign?Object.assign.bind():function(e){for(var n=1;n<arguments.length;n++){var t=arguments[n];for(var i in t)Object.prototype.hasOwnProperty.call(t,i)&&(e[i]=t[i])}return e}).apply(this,arguments)}let c=(0,i.Z)("div",{target:"e1mu10fk1"})({name:"b6wrti",styles:"display:flex;flex-direction:column;width:100%"}),u=(0,i.Z)(r.HeadingSkeleton,{target:"e1mu10fk0"})({name:"1t29t6p",styles:"width:50%"}),m=e=>(0,a.jsx)(c,d({"data-testid":"contactUs-skeleton"},e),(0,a.jsx)(u,null),(0,a.jsx)(s.Z,null,(0,a.jsx)(o.Xj,null),(0,a.jsx)(o.Xj,null))),f=m},11399:(e,n,t)=>{"use strict";t.d(n,{Z:()=>v});var i=t(28165),a=t(54152),r=t(65536),o=t(75054),s=t(38939);let l=(0,s.Z)("div",{target:"ezcwt0n0"})({name:"g6akdy",styles:"display:flex;width:100%;padding-bottom:var(--spacers-c48)"});var d=t(92128),c=t(2784);function u(){return(u=Object.assign?Object.assign.bind():function(e){for(var n=1;n<arguments.length;n++){var t=arguments[n];for(var i in t)Object.prototype.hasOwnProperty.call(t,i)&&(e[i]=t[i])}return e}).apply(this,arguments)}let m=(0,r.Vo)(()=>Promise.all([t.e(52038),t.e(48927)]).then(t.bind(t,33268)),{moduleId:"../../node_modules/@modules/product-contact-us/src/modules/ProductContactUsDesktop/components/ContactUs.tsx"}),f=e=>{let n=(0,c.useRef)(null),t=(0,o.S1)(n);return(0,i.jsx)(a.S,{fallback:d.Z},(0,i.jsx)(l,{ref:n},(0,i.jsx)(r.TT,{until:t},(0,i.jsx)(r.BY,{fallback:(0,i.jsx)(d.Z,e)},(0,i.jsx)(m,u({},e,{isIntersecting:t}))))))},v=f},87374:(e,n,t)=>{"use strict";t.d(n,{Z:()=>r});var i=t(38939);let a=(0,i.Z)("div",{target:"etqh7xq0"})("display:grid;grid-template-columns:repeat(2, 1fr);grid-gap:var(--spacers-c12);margin-top:var(--spacers-c12);width:100%;",e=>{let{theme:n}=e;return`
+        @media (${null==n?void 0:n.mediaQuery.md}) {
+            grid-template-columns: repeat(auto-fit, minmax(calc(25% - var(--spacers-c12)), 1fr));
+        }
+    `},";"),r=a},67828:(e,n,t)=>{"use strict";t.d(n,{Z:()=>v});var i=t(32660),a=t(28165),r=t(54152),o=t(65536),s=t(2784);let l=["initialState"];function d(){return(d=Object.assign?Object.assign.bind():function(e){for(var n=1;n<arguments.length;n++){var t=arguments[n];for(var i in t)Object.prototype.hasOwnProperty.call(t,i)&&(e[i]=t[i])}return e}).apply(this,arguments)}function c(e,n){if(null==e)return{};var t,i,a=u(e,n);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);for(i=0;i<r.length;i++)t=r[i],!(n.indexOf(t)>=0)&&Object.prototype.propertyIsEnumerable.call(e,t)&&(a[t]=e[t])}return a}function u(e,n){if(null==e)return{};var t,i,a={},r=Object.keys(e);for(i=0;i<r.length;i++)t=r[i],n.indexOf(t)>=0||(a[t]=e[t]);return a}let m=(0,o.Vo)(()=>t.e(76721).then(t.bind(t,76721)),{moduleId:"../../node_modules/@slices/ads/src/modules/AsyncAds/index.js"}),f=e=>{let{initialState:n}=e,t=c(e,l);return(0,a.jsx)(r.S,null,(0,a.jsx)(o.BY,{fallback:null},(0,a.jsx)(m,d({initialState:n},t))))},v=(0,i.g1)(f,"slice-recommendations")}}]);

@@ -1,0 +1,20 @@
+
+
+window.universal_variable = window.universal_variable || {};
+
+
+                window.universal_variable.user = {"geoCountryCode":"CO","returning":false,"language":"es","countryId":45,"countryCode":"CO","geoCountryId":45,"geoSubfolder":"/co","userSubfolder":"/co","userId":5000020824660625,"isLogged":false,"ip":"181.57.164.78","isBot":false,"cookieId":"e5f6c639-016a-45a9-811a-55a59c7a43df","sessionId":"644c7575-de36-a0ff-330c-1c97d29446a2","basketId":"a1d5f51e-4e64-45d8-89d9-3d2fb834b743","checkoutType":0,"benefits":[{"Code":"transactional-comms-pc"},{"Code":"product-tag-beat"},{"Code":"product-tag-soft-launch"},{"Code":"no-op"},{"Code":"fitting-information"}],"genderId":0,"wishListQuantity":0,"bct":"170417","accessTier":null,"isMobile":false,"hashedIp":"cace1d6e651ba1f6f0bcfb311582e8d2a64a677a09298ab991357b01784f8ad6","emailVerified":false};
+            
+                window.universal_variable.basket = {"shipping":0.0,"subTotal":0.0,"subTotalIncludeTax":false,"tax":0.0,"total":0.0,"lineItems":[],"isShippingAddressClickAndCollect":false};
+            
+if (window.universal_variable.user) {
+    var uvUserEvt = document.createEvent('Event');
+    uvUserEvt.initEvent('universal_variable.user', true, true);
+    document.dispatchEvent(uvUserEvt);
+
+    var uvLoadedEvt = document.createEvent('Event');
+    uvLoadedEvt.initEvent('uvLoaded', true, true);
+    document.dispatchEvent(uvLoadedEvt);
+
+    window.events.emit('userLoaded');
+}

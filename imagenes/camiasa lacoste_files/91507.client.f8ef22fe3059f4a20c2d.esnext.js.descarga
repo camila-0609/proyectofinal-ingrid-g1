@@ -1,0 +1,258 @@
+"use strict";(self.webpackChunk_portal_app_portal_cr=self.webpackChunk_portal_app_portal_cr||[]).push([[91507],{4984:(e,r,o)=>{o.d(r,{LR:()=>x,bc:()=>S});let t="medium",a={[t]:20,big:40},i={[t]:"0.2rem",big:"var(--spacers-c4)"},n={[t]:"xs",big:"m"},l={[t]:"medium",big:"big"},s={[t]:"var(--borders-corner-s)",big:"1.2rem"};var d=o(19681),c=o(52248);let m=c.default.div`
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    padding-top: ${({width:e,height:r})=>r/e*100}%;
+    background-color: ${({isLoaded:e})=>e?"":"var(--colors-page-primary-loading-surface)"};
+
+    & > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+`;m.displayName="ColorContainer";let p=(0,d.createPolymorphicComponentWithIdentifier)(m,"ColorContainer");var g=o(52903),h=o(99550),u=o(2784);let f=(0,u.forwardRef)(({as:e="div",alt:r,imageContainer:o=p,selected:t=!1,size:a,src:i,unavailable:n=!1,...l},s)=>(0,g.jsx)(e,{"aria-selected":t,"data-unavailable":n,ref:s,...l,children:a&&(0,g.jsx)(h.Ei,{container:o,width:a,height:a,alt:r,src:i})}));f.displayName="BaseColorIcon";let b=(e,r)=>`
+    button&,
+    a& {
+        display: block;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: calc(-1 * var(--borders-border-s));
+            left: calc(-1 * var(--borders-border-s));
+            width: 100%;
+            height: 100%;
+            border: var(--borders-border-s) solid var(--colors-actions-ghost-dark-hover-label);
+            opacity: 0;
+            border-radius: ${r};
+            transition: opacity var(--motion-functional-duration-s)
+                var(--motion-functional-easing-standard);
+        }
+
+        &.focus-visible:focus,
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+        }
+
+        &[aria-selected='true'] {
+            &::before {
+                top: calc(-1 * var(--borders-border-m));
+                left: calc(-1 * var(--borders-border-m));
+                border: var(--borders-border-m) solid
+                    var(--colors-actions-ghost-dark-selected-label);
+                opacity: 1;
+            }
+        }
+    }
+`,v=(e,r,o)=>`
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: var(--icons-${e}-width);
+    max-height: var(--icons-${e}-height);
+    overflow: unset;
+    margin: 0 ${r};
+    padding: ${r};
+    background: none;
+    flex: 0 0 auto;
+
+    ${(0,d.componentSelector)("ColorContainer")} {
+        border-radius: var(--borders-corner-${o});
+    }
+`,y=e=>`
+    &[data-unavailable='true']  {
+        ${(0,d.componentSelector)("ColorContainer")}  {
+            &::after {
+                content: "";
+                position: absolute;
+                ${e?"right: 100%":"left: 100%"};
+                top: 0.1rem;
+                width: 0px;
+                height: 142%;
+                ${e?"border-left: var(--borders-border-s) solid var(--colors-actions-ghost-light-enabled-label); border-right: var(--borders-border-s) solid var(--colors-actions-ghost-dark-selected-label);":"border-right: var(--borders-border-s) solid var(--colors-actions-ghost-light-enabled-label); border-left: var(--borders-border-s) solid var(--colors-actions-ghost-dark-selected-label);"}
+                transform: ${e?"rotate(45deg) translateX(50%)":"rotate(45deg) translateX(-50%)"};
+                transform-origin: top ${e?"left":"right"};
+            }
+       }
+    } 
+`,$=(0,d.withProps)({size:a.big,imageContainer:p})((0,c.default)(f)`
+    ${v(l.big,i.big,n.big)}
+
+    ${b(l.big,s.big)}
+
+    ${({theme:e})=>y(e.isRTL)}
+`);(0,d.createPolymorphicComponentWithIdentifier)($,"ColorIconBig");let w=(0,d.withProps)({size:a[t]})((0,c.default)(f)`
+    ${v(l[t],i[t],n[t])}
+
+    ${b(l[t],s[t])}
+
+    ${({theme:e})=>y(e.isRTL)}
+`),x=(0,d.createPolymorphicComponentWithIdentifier)(w,"ColorIcon"),C=(0,d.withProps)({role:"group"})(c.default.div`
+    display: flex;
+    align-items: center;
+
+    ${(0,d.componentSelector)("ColorIcon")}:first-of-type {
+        margin-left: 0;
+    }
+
+    ${(0,d.componentSelector)("ColorIcon")}:last-of-type {
+        margin-right: 0;
+    }
+
+    ${(0,d.componentSelector)("ColorIconBig")}:first-of-type {
+        margin-left: var(--spacers-c4);
+    }
+
+    ${(0,d.componentSelector)("ColorIconBig")}:last-of-type {
+        margin-right: var(--spacers-c4);
+    }
+
+    ${(0,d.componentSelector)("ColorIcon")} ~ ${(0,d.componentSelector)("Body")} {
+        margin-left: var(--spacers-c4);
+    }
+
+    ${(0,d.componentSelector)("ColorIconBig")} ~ ${(0,d.componentSelector)("Body")} {
+        margin-left: 0;
+    }
+`),S=(0,d.createPolymorphicComponentWithIdentifier)(C,"ColorSwatch")},10131:(e,r,o)=>{o.d(r,{pq:()=>L,Eo:()=>H,e$:()=>N,bn:()=>T,zX:()=>F});var t=o(19681);let a=e=>`
+    position: relative;
+    width: 100%;
+    height: ${e};
+    border-radius: var(--borders-corner-rounded);
+    background-color: var(--colors-navigation-secondary-enabled-surface);
+
+    ${(0,t.componentSelector)("ProgressBarIndicator")}:nth-of-type(1) {
+        z-index: 1;
+        border-radius: var(--borders-corner-rounded);
+        background-color: var(--colors-navigation-secondary-enabled-indicator);
+    }
+
+    ${(0,t.componentSelector)("ProgressBarIndicator")}:nth-of-type(2) {
+        border-radius: var(--borders-corner-rounded);
+        background-color: var(--colors-navigation-secondary-enabled-indicator2);
+    }
+`;var i=o(52903),n=o(2784);let l=(0,n.forwardRef)(({as:e="div",total:r=100,children:o,...t},a)=>(0,i.jsx)(e,{ref:a,...t,children:n.Children.map(o,e=>[(0,n.cloneElement)(e,{total:r})])}));l.displayName="BaseProgressBar";var s=o(52248);let d=(0,s.default)(l)`
+    ${a("var(--spacers-c8)")}
+`;(0,t.createPolymorphicComponentWithIdentifier)(d,"ProgressBar");let c=s.default.div`
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: var(--spacers-c6);
+
+    ${(0,t.componentSelector)("ProgressBarStep")}:nth-of-type(${({secondFill:e})=>`-n + ${e}`}) {
+        background-color: var(--colors-navigation-secondary-enabled-indicator2);
+    }
+
+    ${(0,t.componentSelector)("ProgressBarStep")}:nth-of-type(${({firstFill:e})=>`-n + ${e}`}) {
+        background-color: var(--colors-navigation-secondary-enabled-indicator);
+    }
+
+    ${(0,t.componentSelector)("ProgressBarStepLabel")} {
+        &:nth-of-type(${({firstFill:e})=>e}) {
+            > ${(0,t.componentSelector)("ProgressBarLabel")}:first-of-type {
+                font-weight: bold;
+            }
+        }
+
+        &:nth-of-type(${({firstFill:e})=>`-n + ${e}`}) {
+            > ${(0,t.componentSelector)("ProgressBarLabel")}:first-of-type {
+                color: var(--colors-navigation-secondary-enabled-indicator);
+            }
+
+            > ${(0,t.componentSelector)("ProgressBarStep")} {
+                background-color: var(--colors-navigation-secondary-enabled-indicator);
+            }
+        }
+    }
+`,m=(0,t.createPolymorphicComponentWithIdentifier)(c,"ProgressBarContainer"),p=(0,n.forwardRef)(({as:e="div",fill:r,total:o,...t},a)=>(0,i.jsx)(e,{role:"progressbar","aria-valuemin":"0","aria-valuemax":o,"aria-valuenow":o&&r>o?o:r,ref:a,...t}));p.displayName="BaseProgressBarIndicator";let g=s.default.div`
+    height: 100%;
+    background-color: var(--colors-navigation-secondary-enabled-surface);
+`,h=(0,t.createPolymorphicComponentWithIdentifier)(g,"ProgressBarStep"),u=(0,n.forwardRef)(({children:e,containerComponent:r=m,stepComponent:o=h,total:t,...a},l)=>{let s,d;return n.Children.toArray(e).filter((e,r)=>{(0,n.isValidElement)(e)&&(0===r&&(s=e.props.fill),1===r&&(d=e.props.fill))}),(0,i.jsxs)(r,{firstFill:s,secondFill:d,ref:l,...a,children:[[...Array(parseInt(t.toString()))].map((e,r)=>(0,i.jsx)(o,{"aria-hidden":"true"},r)),n.Children.map(e,e=>[(0,n.cloneElement)(e,{total:t})])]})});u.displayName="BaseProgressBarStepped";var f=o(54729);let b=e=>{let r=/\d+(\.\d+)?/,o={};for(let t in e){let a=e[t],i=a.match(r);i&&(o[t]=parseFloat(i[0]))}return o},v=e=>{let r={_initial:"0em"};for(let o in e)r[o]=e[o]+"em";return r},y=e=>({_initial:"(min-width: 0em)",xs:`(min-width: ${e.xs}em)`,sm:`(min-width: ${e.sm}em)`,md:`(min-width: ${e.md}em)`,lg:`(min-width: ${e.lg}em)`,xl:`(min-width: ${e.xl}em)`,"max-lg":`(max-width: ${e.lg-.0625}em)`,"max-md":`(max-width: ${e.md-.0625}em)`,"max-sm":`(max-width: ${e.sm-.0625}em)`,"max-xl":`(max-width: ${e.xl-.0625}em)`,"max-xs":`(max-width: ${e.xs-.0625}em)`,iphone6:"only screen and (min-device-width : 23.4375em) and (max-device-width : 41.6875em) and (orientation : portrait)",iphone6plus:"only screen and (min-device-width : 25.875em) and (max-device-width : 46em) and (orientation : portrait)"}),$=b(f.mediaQueries);v($),y($);let w=(0,n.createContext)({isCalculated:!1,mediaType:"xs",lessThan:{},greaterThan:{},is:{},orientation:void 0}),x=()=>{let e=(0,n.useContext)(w);return e};var C=o(28519);let S=e=>{let r=(0,n.forwardRef)(({children:r,...o},t)=>{let{lessThan:a}=x(),l=(0,n.useRef)(null),s=(0,C.default)(l,t),d=n.Children.toArray(r).findIndex(e=>{var r;if((0,n.isValidElement)(e))return null===(r=e.props)||void 0===r?void 0:r.current});return(0,n.useEffect)(()=>{if(a.sm&&d>=0){let e=null==l?void 0:l.current,r=null==e?void 0:e.children[d],o=null==e?void 0:e.children[d+1],t=null==r?void 0:r.getBoundingClientRect(),i=null==o?void 0:o.getBoundingClientRect(),n=window.innerHeight||document.documentElement.clientHeight,s=window.innerWidth||document.documentElement.clientWidth;if(!((null==i?void 0:i.top)>=0)||!((null==i?void 0:i.left)>=0)||!((null==i?void 0:i.bottom)<=n)||!((null==i?void 0:i.right)<=s))return e.scrollTo({left:t.width*(d-1)})}},[d]),(0,i.jsx)(e,{ref:s,...o,children:r})});return r.displayName=e.displayName,r},P=e=>{let r=(0,n.forwardRef)(({children:r,...o},t)=>{let a=(0,n.useRef)(null),l=(0,C.default)(a,t);return(0,n.useEffect)(()=>{let e=null==a?void 0:a.current,r={top:0,left:0,x:0,y:0},o=o=>{e.classList.add("grabbing"),r.left=e.scrollLeft,r.top=e.scrollTop,r.x=o.clientX,r.y=o.clientY,document.addEventListener("mousemove",t),document.addEventListener("mouseup",i)},t=o=>{let t=o.clientX-r.x,a=o.clientY-r.y;e.scrollTop=r.top-a,e.scrollLeft=r.left-t},i=()=>{e.classList.remove("grabbing"),document.removeEventListener("mousemove",t),document.removeEventListener("mouseup",i)};return e.addEventListener("mousedown",o),()=>{document.removeEventListener("mousedown",o)}},[]),(0,i.jsx)(e,{ref:l,...o,children:r})});return r.displayName=e.displayName,r},B=(0,n.forwardRef)(({children:e,containerComponent:r,...o},t)=>{let a=n.Children.toArray(e).findIndex(e=>{if((0,n.isValidElement)(e))return e.props.current});return(0,i.jsx)(m,{firstFill:a+1,ref:t,...o,children:e})});B.displayName="BaseProgressBarSteppedLabelled";let I=P(S(B)),k=(0,s.default)(p)`
+    position: absolute;
+    top: 0;
+    width: min(
+        100%,
+        ${({fill:e,total:r})=>`${100*parseInt(e.toString())/parseInt(r.toString())}%`}
+    );
+    height: 100%;
+    transition: width var(--motion-functional-duration-m) var(--motion-functional-easing-standard);
+`,L=(0,t.createPolymorphicComponentWithIdentifier)(k,"ProgressBarIndicator");var W=o(13036);let E=s.default.span`
+    margin-bottom: var(--spacers-c8);
+    display: block;
+    ${W.footnoteStyles}
+
+    @media (${({theme:e})=>e.mediaQuery.sm}) {
+        ${W.bodyStyles}
+    }
+`,R=(0,t.createPolymorphicComponentWithIdentifier)(E,"ProgressBarLabel"),j=(0,s.default)(l)`
+    ${a("var(--spacers-c4)")}
+`,N=(0,t.createPolymorphicComponentWithIdentifier)(j,"ProgressBarSmall"),_=(0,n.forwardRef)(({as:e="div",children:r,labelComponent:o=R,stepComponent:t=h,...a},n)=>(0,i.jsxs)(e,{ref:n,...a,"data-component":"ProgressBarStepLabel",children:[(0,i.jsx)(o,{children:r}),(0,i.jsx)(t,{})]}));_.displayName="ProgressBarStepLabel";let T=(0,t.createPolymorphicComponentWithIdentifier)(_,"ProgressBarStepLabel"),X=(0,s.default)(u)`
+    height: var(--spacers-c8);
+
+    ${(0,t.componentSelector)("ProgressBarStep")} {
+        border-radius: var(--borders-corner-rounded);
+    }
+`;(0,t.createPolymorphicComponentWithIdentifier)(X,"ProgressBarStepped");let z=(0,s.default)(u)`
+    height: var(--spacers-c4);
+
+    ${(0,t.componentSelector)("ProgressBarStep")} {
+        border-radius: var(--borders-corner-rounded);
+    }
+`;(0,t.createPolymorphicComponentWithIdentifier)(z,"ProgressBarSteppedSmall");let A=(0,s.default)(I)`
+    overflow-x: scroll;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    cursor: grab;
+    gap: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    &.grabbing {
+        user-select: none;
+        cursor: grabbing;
+    }
+
+    @media (${({theme:e})=>e.mediaQuery.sm}) {
+        cursor: default;
+
+        &.grabbing {
+            user-select: auto;
+            cursor: default;
+        }
+    }
+
+    ${(0,t.componentSelector)("ProgressBarStepLabel")} {
+        min-width: calc(30% - var(--spacers-c12));
+        margin-right: var(--spacers-c12);
+        flex: 1;
+        color: var(--colors-navigation-secondary-disabled-label);
+
+        :last-child {
+            margin-right: 0;
+        }
+
+        @media (${({theme:e})=>e.mediaQuery.sm}) {
+            min-width: unset;
+        }
+
+        > ${(0,t.componentSelector)("ProgressBarStep")} {
+            height: var(--spacers-c4);
+            border-radius: var(--borders-corner-rounded);
+            background-color: var(--colors-navigation-secondary-disabled-indicator);
+        }
+    }
+`,F=(0,t.createPolymorphicComponentWithIdentifier)(A,"ProgressBarSteppedLabelled");var Q=o(96919);let V=(0,s.default)(Q.default)`
+    height: var(--spacers-c8);
+`,H=(0,t.createPolymorphicComponentWithIdentifier)(V,"ProgressBarSkeleton"),Y=(0,s.default)(Q.default)`
+    height: var(--spacers-c4);
+`;(0,t.createPolymorphicComponentWithIdentifier)(Y,"ProgressBarSkeletonSmall")}}]);

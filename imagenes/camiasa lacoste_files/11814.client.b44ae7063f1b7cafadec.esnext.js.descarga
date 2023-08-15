@@ -1,0 +1,74 @@
+(self.webpackChunk_portal_app_portal_cr=self.webpackChunk_portal_app_portal_cr||[]).push([[11814],{5626:(e,t,o)=>{"use strict";o.d(t,{UQ:()=>p,KF:()=>k,cV:()=>f,Qd:()=>b,S4:()=>y,Hk:()=>S,bB:()=>K});var n=o(52903),r=o(2784),a=o(19681),i=o(54729);let l=(0,r.forwardRef)(({as:e="div",children:t,focusedIndex:o=-1,setFocusedIndex:r,...l},c)=>{let{isRTL:d}=(0,i.useTheme)(),{handleKeyDown:s}=(0,a.useDescendantKeyboardNavigation)({isRTL:d,focusedIndex:o});return(0,n.jsx)(e,{onKeyDown:s,...l,ref:c,children:t})});l.displayName="BaseAccordionContainer";let c=(0,r.createContext)({hasFade:!1,setHasFade:()=>null,getItemIndex:()=>null,focusedIndex:-1,onSelectAccordionItem:()=>null,selectedIndexes:[],setFocusedIndex:()=>null,noLine:!1,renderAll:!1,multiple:!0}),d=(0,r.createContext)({index:-1,disabled:!1,isExpanded:!1,selectedIndexes:[],setIsExpanded:()=>null}),s=(0,r.forwardRef)(({selectedIndexes:e=[],children:t,onChange:o,renderAll:i=!1,noLine:l=!1,multiple:d=!0,...s},u)=>{let[p,m]=(0,r.useState)(!1),[f,h]=(0,r.useState)(-1);return(0,n.jsx)(a.DescendantProvider,{children:(0,n.jsx)(c.Provider,{value:{noLine:l,selectedIndexes:e,hasFade:p,setHasFade:m,focusedIndex:f,setFocusedIndex:h,renderAll:i,onSelectAccordionItem:o,multiple:d},children:(0,n.jsx)(L,{ref:u,onChange:o,focusedIndex:f,setFocusedIndex:h,...s,children:t&&r.Children.map(t,(e,t)=>[r.cloneElement(e,{index:t})])})})})});s.displayName="BaseAccordion";let u=(0,r.forwardRef)(({initialIndexes:e=[],children:t,...o},a)=>{let[i,l]=(0,r.useState)(e),c=e=>{l(e)};return(0,n.jsx)(s,{selectedIndexes:i,ref:a,onChange:c,...o,children:t})});u.displayName="Accordion";let p=(0,a.createPolymorphicComponentWithIdentifier)(u,"Accordion"),m=(0,r.forwardRef)(({indexes:e=[],children:t,onChange:o,...r},a)=>(0,n.jsx)(s,{ref:a,onChange:o,selectedIndexes:e,...r,children:t}));m.displayName="AccordionControlled";let f=(0,a.createPolymorphicComponentWithIdentifier)(m,"AccordionControlled"),h=(0,r.forwardRef)(({initialIndexes:e=[],children:t,onChange:o,multiple:a,...i},l)=>{let[c,d]=(0,r.useState)(e),u=e=>{null==o||o(e),d(e)};return(0,n.jsx)(s,{selectedIndexes:c,ref:l,onChange:u,noLine:!0,multiple:a,...i,children:t})});h.displayName="AccordionNoLine",(0,a.createPolymorphicComponentWithIdentifier)(h,"AccordionNoLine");var v=o(52248);let g=(0,v.default)(f)``;g.defaultProps={noLine:!0};let y=(0,a.createPolymorphicComponentWithIdentifier)(g,"AccordionNoLineControlled");var x=o(28165);let C=(0,r.forwardRef)(({as:e="section",disabled:t=!1,index:o=0,children:a,...i},l)=>{let{noLine:s,selectedIndexes:u}=(0,r.useContext)(c),p=!t&&u.includes(o);return(0,n.jsx)(e,{...i,ref:l,css:x.css`
+                    ${s?"":"border-bottom: var(--borders-border-s) solid var(--colors-navigation-primary-active-stroke);"}
+                    margin-bottom: var(--spacers-c12);
+                `,"data-expandend":p?"open":"collapsed",children:(0,n.jsx)(d.Provider,{value:{index:o,isExpanded:p,disabled:t},children:a})})});C.displayName="AccordionItem";let b=(0,a.createPolymorphicComponentWithIdentifier)(C,"AccordionItem");var w=o(95476),I=o(28519);let A=(0,r.forwardRef)(({children:e,removeIcon:t=!1,onClick:o,...i},l)=>{let{index:s,disabled:u,isExpanded:p}=(0,r.useContext)(d),{setFocusedIndex:m,setHasFade:f,selectedIndexes:h,onSelectAccordionItem:v,multiple:g}=(0,r.useContext)(c),{descendantPosition:y,descendantRef:x}=(0,a.useDescendant)(s),C=(0,I.default)(null!=x?x:null,null!=l?l:null),[b,A]=(0,r.useState)(!1),k=(0,r.useMemo)(()=>b&&h.includes(s),[b,h,s]),P=()=>{m(y),A(!0)},R=()=>{f(!0),A(!1)},S=e=>{let t;t=g?h.includes(s)?h.filter(e=>e!==s):[...h,s]:h.includes(s)?[]:[s],null==o||o(e),null==v||v(t)};return(0,n.jsxs)(W,{...i,ref:C,onBlur:R,onKeyUp:P,onClick:S,"data-expanded":p,isFocusVisible:k,"aria-disabled":u,disabled:u,children:[(0,n.jsx)(N,{"data-expanded":p,children:e}),!t&&(0,n.jsx)(w.Z,{id:"chevronUpSmall"})]})});A.displayName="AccordionButton";let k=(0,a.createPolymorphicComponentWithIdentifier)(A,"AccordionButton");var P=o(97209);let R=(0,r.forwardRef)(({children:e,forceRender:t=!1,...o},a)=>{let{index:i,isExpanded:l}=(0,r.useContext)(d),{renderAll:s}=(0,r.useContext)(c),u=(0,r.useRef)(null),[p,m]=(0,r.useState)(void 0),[f,h]=(0,r.useState)(i>=0&&l);return(0,r.useEffect)(()=>{var e;i>=0&&!f&&l&&(h(!0),u.current&&m(`${(null===(e=u.current.getBoundingClientRect())||void 0===e?void 0:e.height)+20*parseInt("2.4rem",10)}px`))},[l,f,h,m,i]),(0,r.useEffect)(()=>{let e=new P.Z(e=>{let t=e.some(({target:e})=>u.current===e);t&&u.current&&m(`${u.current.getBoundingClientRect().height+20*parseInt("2.4rem",10)}px`)});return u.current&&e.observe(u.current),()=>{e.disconnect()}},[]),(0,n.jsx)(U,{...o,ref:a,"data-expanded":l,height:l?p:0,hidden:!l,children:(0,n.jsx)($,{ref:u,children:f||s||t?e:null})})});R.displayName="AccordionPanel";let S=(0,a.createPolymorphicComponentWithIdentifier)(R,"AccordionPanel");var D=o(13036);let j=(0,v.default)(D.Kicker)`
+    max-width: calc(100% - (var(--spacers-c12) + var(--spacers-c24)));
+    overflow: hidden;
+    padding-right: var(--spacers-c12);
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+`,N=(0,a.createPolymorphicComponentWithIdentifier)(j,"ButtonText"),E=v.default.button`
+    ${D.kickerStyles}
+    position: relative;
+    width: 100%;
+    height: 4.4rem;
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    outline: none;
+    background: none;
+    color: var(--colors-navigation-primary-active-label);
+    text-align: left;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    & svg:last-of-type {
+        margin-right: var(--spacers-c6);
+        transform: ${({"data-expanded":e})=>e?"rotate(0deg)":"rotate(180deg)"};
+        transition: transform var(--motion-functional-duration-m);
+        fill: var(--colors-navigation-primary-active-icon);
+    }
+
+    ${({isFocusVisible:e})=>e&&`
+            outline: 0.2rem solid Highlight;
+
+            @media (min-device-pixel-ratio: 0) {
+                outline-style: auto;
+                outline-color: -webkit-focus-ring-color;
+            }
+        `}
+
+    &[aria-disabled="true"] {
+        cursor: none;
+        pointer-events: none;
+        color: var(--colors-navigation-primary-disabled-label);
+        background-color: var(--colors-navigation-secondary-disabled-surface);
+        & svg:last-of-type {
+            fill: var(--colors-navigation-primary-disabled-label);
+        }
+    }
+`,W=(0,a.createPolymorphicComponentWithIdentifier)(E,"AccordionButtonContainer"),B=v.default.div`
+    overflow: auto;
+    margin: var(--spacers-c12) 0 var(--spacers-c24);
+`,$=(0,a.createPolymorphicComponentWithIdentifier)(B,"InnerPanel"),F=v.default.div`
+    height: ${({height:e})=>e};
+    overflow: hidden;
+    display: block;
+    outline: none;
+    opacity: ${({"data-expanded":e})=>e?"1":"0"};
+    transition: ${({isExpanded:e})=>e?"height var(--motion-functional-duration-m) var(--motion-functional-easing-decelerated), opacity var(--motion-functional-duration-m) var(--motion-functional-easing-decelerated) ":"height var(--motion-emotional-duration-m) var(--motion-emotional-easing-decelerated), opacity var(--motion-emotional-duration-m) var(--motion-emotional-easing-decelerated) "};
+`,U=(0,a.createPolymorphicComponentWithIdentifier)(F,"AccordionPanel"),_=(0,v.default)(l,{shouldForwardProp:(0,a.shouldNotForwardProp)("initialIndexes","collapsible")})`
+    width: 100%;
+`,L=(0,a.createPolymorphicComponentWithIdentifier)(_,"AccordionContainer"),T=()=>{let{index:e,disabled:t,isExpanded:o}=(0,r.useContext)(d),{selectedIndexes:n}=(0,r.useContext)(c);return{index:e,selectedIndexes:n,disabled:t,isExpanded:o}},K=T;var H=o(96919);let z=(0,v.default)(H.default)`
+    width: ${({index:e})=>1==e?"80%":"100%"};
+    height: calc(var(--typography-kicker-font-size) * var(--typography-kicker-line-height));
+`,M=({items:e=1,...t})=>(0,n.jsx)(n.Fragment,{children:[...Array(e)].map((e,o)=>(0,n.jsx)("div",{css:x.css`
+                            height: 4.4rem;
+                            margin-bottom: var(--spacers-c12);
+                            display: flex;
+                            align-items: center;
+                        `,children:(0,n.jsx)(z,{...t,index:o})},o))});(0,a.createPolymorphicComponentWithIdentifier)(M,"AccordionSkeleton")},50381:(e,t,o)=>{"use strict";var n=o(91706),r={"text/plain":"Text","text/html":"Url",default:"Text"},a="Copy to clipboard: #{key}, Enter";function i(e){var t=(/mac os x/i.test(navigator.userAgent)?"\u2318":"Ctrl")+"+C";return e.replace(/#{\s*key\s*}/g,t)}function l(e,t){var o,l,c,d,s,u=!1;t||(t={}),t.debug;try{if(l=n(),c=document.createRange(),d=document.getSelection(),(s=document.createElement("span")).textContent=e,s.style.all="unset",s.style.position="fixed",s.style.top=0,s.style.clip="rect(0, 0, 0, 0)",s.style.whiteSpace="pre",s.style.webkitUserSelect="text",s.style.MozUserSelect="text",s.style.msUserSelect="text",s.style.userSelect="text",s.addEventListener("copy",function(o){if(o.stopPropagation(),t.format){if(o.preventDefault(),void 0===o.clipboardData){window.clipboardData.clearData();var n=r[t.format]||r.default;window.clipboardData.setData(n,e)}else o.clipboardData.clearData(),o.clipboardData.setData(t.format,e)}t.onCopy&&(o.preventDefault(),t.onCopy(o.clipboardData))}),document.body.appendChild(s),c.selectNodeContents(s),d.addRange(c),!document.execCommand("copy"))throw Error("copy command was unsuccessful");u=!0}catch(m){try{window.clipboardData.setData(t.format||"text",e),t.onCopy&&t.onCopy(window.clipboardData),u=!0}catch(p){o=i("message"in t?t.message:a),window.prompt(o,e)}}finally{d&&("function"==typeof d.removeRange?d.removeRange(c):d.removeAllRanges()),s&&document.body.removeChild(s),l()}return u}e.exports=l},91706:e=>{e.exports=function(){var e=document.getSelection();if(!e.rangeCount)return function(){};for(var t=document.activeElement,o=[],n=0;n<e.rangeCount;n++)o.push(e.getRangeAt(n));switch(t.tagName.toUpperCase()){case"INPUT":case"TEXTAREA":t.blur();break;default:t=null}return e.removeAllRanges(),function(){"Caret"===e.type&&e.removeAllRanges(),e.rangeCount||o.forEach(function(t){e.addRange(t)}),t&&t.focus()}}}}]);

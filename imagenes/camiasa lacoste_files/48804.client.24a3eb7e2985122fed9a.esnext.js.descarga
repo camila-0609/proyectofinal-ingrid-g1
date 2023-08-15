@@ -1,0 +1,932 @@
+"use strict";(self.webpackChunk_portal_app_portal_cr=self.webpackChunk_portal_app_portal_cr||[]).push([[48804],{48804:(e,r,o)=>{o.d(r,{Il:()=>e$,dT:()=>q,Hc:()=>k,Kf:()=>O,$v:()=>H,Ow:()=>es,Od:()=>$,Ae:()=>ez,C0:()=>ef,jZ:()=>eJ,Q2:()=>eh,qf:()=>eW,AF:()=>eY,$n:()=>h,rF:()=>v,O1:()=>eT,p:()=>ew,nD:()=>ev,u6:()=>D,Z$:()=>eR,Rp:()=>X,GJ:()=>A,RK:()=>R,ip:()=>Z,u7:()=>T,b9:()=>j,d0:()=>E,E0:()=>L,mA:()=>eF,gH:()=>eN,vl:()=>ep});var t=o(99550),a=o(19681);let i=`
+    &::before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: var(--colors-cards-light-enabled-overlay);
+        z-index: 1;
+    }
+`,n=e=>`
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: url(${e});
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0;
+        cursor: pointer;
+        transition: opacity var(--motion-functional-duration-m)
+            var(--motion-functional-easing-standard);
+    }
+
+    &:hover {
+        ~ ${(0,a.componentSelector)("LabelSecondaryDark")},
+        ~ ${(0,a.componentSelector)("LabelSecondaryLight")} {
+            opacity: 0;
+        }
+
+        &::after {
+            opacity: 1;
+        }
+    }
+`,c=()=>`
+    position: relative;
+    display: grid;
+    grid-template-areas: 'link' 'actions';
+    grid-template-rows: auto 1fr auto;
+    background-color: var(--colors-cards-light-enabled-surface);
+
+    ${(0,a.componentSelector)("ProductCardInfo")} {
+        margin-top: var(--spacers-c12);
+        grid-area: info;
+    }
+
+    ${(0,a.componentSelector)("WishlistButton")},
+    ${(0,a.componentSelector)("WishlistButtonControlled")},
+    ${(0,a.componentSelector)("IconButtonGhostDark")} {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+`;var d=o(52248);let l=(0,d.default)(t.W2,{shouldForwardProp:(0,a.shouldNotForwardProp)("hoverSrc","hasOverlay","isImmersive")})`
+    --padding-calc: calc(4 / 3 * 100% + 2rem);
+
+    @media (${({theme:e})=>e.mediaQuery.xs}) {
+        --padding-calc: calc(4 / 3 * 100%);
+    }
+
+    padding-top: var(--padding-calc);
+    cursor: pointer;
+    isolation: isolate;
+    background-color: transparent;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: var(--spacers-l36);
+        right: calc(var(--spacers-c10) + var(--spacers-c10));
+        bottom: var(--spacers-c16);
+        left: calc(var(--spacers-c10) + var(--spacers-c10));
+        z-index: -1;
+        display: block;
+        background-color: var(--colors-page-primary-loading-surface);
+    }
+
+    ${(0,a.componentSelector)("ProductCardImagePrimary")},
+    ${(0,a.componentSelector)("ProductCardImageSecondary")} {
+        padding: 3.6rem 0 var(--spacers-c16);
+        object-fit: contain;
+        transition: opacity var(--motion-functional-duration-m)
+            var(--motion-functional-easing-standard);
+    }
+
+    @media (hover: hover) and (pointer: fine) and (${({theme:e})=>e.mediaQuery.sm}) {
+        ${({isLoaded:e,hoverSrc:r})=>r&&e&&n(r)}
+    }
+
+    ${(0,a.componentSelector)("LabelSecondaryDark")},
+    ${(0,a.componentSelector)("LabelSecondaryLight")} {
+        transition: opacity var(--motion-functional-duration-m)
+            var(--motion-functional-easing-standard);
+    }
+
+    ${({hasOverlay:e})=>e&&i}
+`,p=(0,a.createPolymorphicComponentWithIdentifier)(l,"ProductCardImageContainer");var m=o(52903),s=o(2784);let u=(0,s.forwardRef)(({imageContainer:e=p,mainSrc:r,hoverSrc:o,hasOverlay:a=!1,height:i=400,width:n=300,alt:c,...d},l)=>(0,m.jsx)(t.Ei,{container:e,containerProps:{hasOverlay:a,hoverSrc:o},alt:c,ref:l,...d,width:n,height:i,src:r}));u.displayName="BaseProductCardImage";let f=(0,s.forwardRef)(({imageContainer:e=p,mainSrc:r,height:o=400,width:a=300,...i},n)=>(0,m.jsx)(t.Ei,{container:e,ref:n,...i,width:a,height:o,src:r}));f.displayName="BaseProductCardHorizontalImage";let g=(0,d.default)(u)``,h=(0,a.withIdentifier)(g,"ProductCardImagePrimary"),y=(0,d.default)(u)``;y.defaultProps={hasOverlay:!0};let v=(0,a.withIdentifier)(y,"ProductCardImageSecondary"),C=(0,d.default)(t.W2,{shouldForwardProp:(0,a.shouldNotForwardProp)("hoverSrc","hasOverlay")})`
+    align-self: start;
+    grid-area: image;
+    background-color: transparent;
+
+    ${(0,a.componentSelector)("ProductCardHorizontalImage")} {
+        object-fit: contain;
+    }
+`,P=(0,a.createPolymorphicComponentWithIdentifier)(C,"ProductCardHorizontalImageContainer"),S=(0,d.default)(f)``;S.defaultProps={imageContainer:P};let $=(0,a.withIdentifier)(S,"ProductCardHorizontalImage"),I=(0,d.default)(f)``;I.defaultProps={imageContainer:P,width:33,height:44},I.displayName="ProductCardHorizontalImageMini",(0,a.withIdentifier)(I,"ProductCardHorizontalImageMini");var w=o(13036);let b=(0,s.forwardRef)(({children:e,as:r=w.BodyBold,...o},t)=>(0,m.jsx)(r,{dir:"ltr",ref:t,...o,children:e}));b.displayName="BaseProductCardBrandName";let x=(0,d.default)(b)`
+    text-align: left;
+`,k=(0,a.createPolymorphicComponentWithIdentifier)(x,"ProductCardBrandName"),W=(0,d.default)(w.Body)``,H=(0,a.createPolymorphicComponentWithIdentifier)(W,"ProductCardDescription"),z=d.default.div`
+    overflow: hidden;
+    display: -webkit-box; /* stylelint-disable-line value-no-vendor-prefix */
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; /* stylelint-disable-line property-no-vendor-prefix */
+
+    ${(0,a.componentSelector)("ProductCardBrandName")},
+    ${(0,a.componentSelector)("ProductCardDescription")} {
+        &::after {
+            content: '\\a';
+            width: 100%;
+            white-space: pre-wrap;
+        }
+    }
+`,D=(0,a.createPolymorphicComponentWithIdentifier)(z,"ProductCardInfoClamp"),B=d.default.div`
+    padding-top: 2.2rem;
+    grid-area: 1 / 1 / 4 / 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--motion-functional-duration-m) var(--motion-functional-easing-standard);
+    background-color: white;
+`,j=(0,a.createPolymorphicComponentWithIdentifier)(B,"ProductCardSizes"),Q=(0,d.default)(w.BodyBold)``,L=(0,a.createPolymorphicComponentWithIdentifier)(Q,"ProductCardSizesLabel"),N=(0,d.default)(w.Body)``,E=(0,a.createPolymorphicComponentWithIdentifier)(N,"ProductCardSizesAvailable"),F=(0,d.default)(w.Footnote)``,A=(0,a.createPolymorphicComponentWithIdentifier)(F,"ProductCardProductId"),M=(0,d.default)(w.Body)``,R=(0,a.createPolymorphicComponentWithIdentifier)(M,"ProductCardQuantity"),G=(0,d.default)(w.Body)``,T=(0,a.createPolymorphicComponentWithIdentifier)(G,"ProductCardSelectedSize"),_=(0,d.default)(w.Body)`
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+`,O=(0,a.createPolymorphicComponentWithIdentifier)(_,"ProductCardColorDescription"),J=d.default.div`
+    min-width: 0;
+    display: flex;
+
+    ${(0,a.componentSelector)("ColorIcon")} {
+        margin-inline-start: -0.2rem;
+        margin-inline-end: var(--spacers-c6);
+    }
+`,Z=(0,a.createPolymorphicComponentWithIdentifier)(J,"ProductCardSelectedColor"),K=(0,d.default)(w.Footnote)`
+    color: var(--colors-cards-light-enabled-text);
+`;(0,a.createPolymorphicComponentWithIdentifier)(K,"ProductCardGroupHeaderInfoText");var V=o(95476);let Y=d.default.div`
+    display: grid;
+    row-gap: var(--spacers-c12);
+`,q=(0,a.createPolymorphicComponentWithIdentifier)(Y,"ProductCardActions"),U=d.default.a`
+    grid-row: 1/3;
+`,X=(0,a.createPolymorphicComponentWithIdentifier)(U,"ProductCardLink"),ee=d.default.span`
+    position: relative;
+    display: flex;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 4.4rem;
+        height: 4.4rem;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+`,er=(0,a.createPolymorphicComponentWithIdentifier)(ee,"ProductCardTooltipAnchorWrapper");var eo=o(1232),et=o(97613);let ea=(0,s.forwardRef)(({children:e,tooltipContent:r,tooltipProps:o,iconProps:t,tooltipAnchorProps:a,...i},n)=>(0,m.jsxs)(w.Footnote,{ref:n,...i,children:[e,(0,m.jsx)(et._O,{placement:eo.Qe.bottom,triggers:et.YD.click,...o,content:r,children:(0,m.jsx)(er,{...a,children:(0,m.jsx)(V.Z,{id:"infoCircleSmall",...t})})})]}));ea.displayName="BaseProductCardStockMessage";let ei=(0,d.default)(ea)`
+    display: flex;
+    align-items: center;
+`;(0,a.createPolymorphicComponentWithIdentifier)(ei,"ProductCardStockMessage");var en=o(64346);let ec=(0,d.default)(en.B0)`
+    z-index: 0;
+
+    &::before {
+        content: '';
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: var(--colors-cards-light-enabled-overlay);
+        z-index: 1;
+    }
+
+    ${(0,a.componentSelector)("CarouselActionContainer")} {
+        z-index: 2;
+        padding: 0 var(--spacers-c4);
+    }
+
+    ${(0,a.componentSelector)("PaginationContainer")} {
+        position: absolute;
+        left: 0;
+        bottom: var(--spacers-c24);
+        width: 100%;
+    }
+
+    ${(0,a.componentSelector)("CarouselPagination")} {
+        width: calc(100% - var(--spacers-c24));
+        @media (${({theme:e})=>e.mediaQuery.sm}) {
+            width: calc(100% - var(--spacers-c48));
+        }
+    }
+
+    ${(0,a.componentSelector)("CarouselSlide")} {
+        padding: 0;
+        &:first-child {
+            padding: var(--spacers-c36) calc(var(--spacers-c24) + var(--spacers-c6))
+                calc(var(--spacers-c48) - var(--spacers-c6));
+
+            @media (${({theme:e})=>e.mediaQuery.sm}) {
+                padding: calc(var(--spacers-c36) * 2) var(--spacers-c48)
+                    calc(var(--spacers-c24) * 2 + var(--spacers-c6));
+            }
+        }
+    }
+`,ed=(0,a.createPolymorphicComponentWithIdentifier)(ec,"SuperProductCardSlideshowWrapper"),el=(0,s.forwardRef)(({children:e,...r},o)=>(0,m.jsx)(en.gf,{wrapper:ed,ref:o,...r,children:e}));el.displayName="SuperProductCardSlideshow";let ep=(0,a.createPolymorphicComponentWithIdentifier)(el,"SuperProductCardSlideshow"),em=d.default.div`
+    ${(0,a.componentSelector)("LabelSecondaryLight")}, ${(0,a.componentSelector)("LabelSecondaryDark")} {
+        position: absolute;
+        top: 1rem;
+        max-width: calc(100% - 4.4rem);
+        pointer-events: none;
+        transition: opacity var(--motion-functional-duration-m)
+            var(--motion-functional-easing-standard);
+
+        @media (${({theme:e})=>e.mediaQuery.xs}) {
+            max-width: calc(100% - 4.4rem - var(--spacers-c4));
+        }
+    }
+`,es=(0,a.createPolymorphicComponentWithIdentifier)(em,"ProductCardHeader"),eu=d.default.div`
+    grid-area: productInfo;
+`,ef=(0,a.createPolymorphicComponentWithIdentifier)(eu,"ProductCardHorizontalProductInfo"),eg=d.default.div`
+    grid-area: purchaseDetails;
+`,eh=(0,a.createPolymorphicComponentWithIdentifier)(eg,"ProductCardHorizontalPurchaseDetails"),ey=d.default.div`
+    display: grid;
+    grid-template-areas: 'label' 'info' 'price' 'swatch';
+    grid-template-rows: 2.2rem 6.6rem 1fr;
+    cursor: pointer;
+
+    & > ${(0,a.componentSelector)("LabelPrimary")} {
+        overflow: hidden;
+        grid-area: label;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    & > ${(0,a.componentSelector)("PriceBrief")} {
+        padding-top: var(--spacers-c4);
+        grid-area: price;
+    }
+
+    & > ${(0,a.componentSelector)("ProductCardInfoClamp")} {
+        grid-area: info;
+    }
+
+    & > ${(0,a.componentSelector)("ColorSwatch")} {
+        margin-top: var(--spacers-c12);
+        grid-area: swatch;
+    }
+
+    @media (hover: hover) and (pointer: fine) and (${({theme:e})=>e.mediaQuery.sm}) {
+        & > *:not(${(0,a.componentSelector)("ColorSwatch")}) {
+            &:hover {
+                ~ ${(0,a.componentSelector)("ProductCardSizes")} {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+`,ev=(0,a.createPolymorphicComponentWithIdentifier)(ey,"ProductCardInfo"),eC=d.default.div`
+    ${(0,a.componentSelector)("Icon")}, ${(0,a.componentSelector)("FlagIcon")} {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        color: var(--colors-cards-light-enabled-icon);
+    }
+`;(0,a.createPolymorphicComponentWithIdentifier)(eC,"ProductCardGroupHeaderInfo");let eP=(0,s.forwardRef)(({as:e="div",children:r,aspectRatio:o="3/4",...t},a)=>{let i=`0 0 ${o.split("/").join(" ")}`;return(0,m.jsxs)(e,{ref:a,...t,children:[(0,m.jsx)("svg",{viewBox:i}),r]})});eP.displayName="BaseProductCardImmersive";let eS=d.default.div`
+    ${c}
+
+    ${(0,a.componentSelector)("ProductCardLink")} {
+        display: grid;
+        grid-area: link;
+        grid-template-areas: 'image' 'info';
+        grid-template-rows: auto 1fr auto;
+        grid-row: 1/3;
+    }
+
+    ${(0,a.componentSelector)("ProductCardHeader")} {
+        position: relative;
+        grid-area: image;
+    }
+
+    ${(0,a.componentSelector)("ProductCardActions")} {
+        margin-top: var(--spacers-c24);
+        grid-area: actions;
+        grid-row: 3;
+    }
+`,e$=(0,a.createPolymorphicComponentWithIdentifier)(eS,"ProductCard"),eI=(0,d.default)(eP)`
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 'image' 'info';
+    grid-template-rows: 1fr auto;
+    cursor: pointer;
+    transition: opacity var(--motion-functional-duration-m) var(--motion-functional-easing-standard);
+    background-color: var(--colors-cards-light-enabled-surface);
+
+    & > svg {
+        grid-area: image / image / info;
+    }
+
+    ${(0,a.componentSelector)("ProductCardLink")} {
+        height: 0;
+        min-height: 100%;
+        display: grid;
+        grid-area: image / image / info;
+        grid-template-areas:
+            'image'
+            'info';
+        grid-template-rows: 1fr auto;
+    }
+
+    ${(0,a.componentSelector)("ProductCardHeader")} {
+        grid-area: image;
+
+        ${(0,a.componentSelector)("LabelSecondaryLight")} {
+            top: 2.2rem;
+            left: var(--spacers-c24);
+            max-width: calc(100% - 4.4rem - var(--spacers-c48) - 1rem);
+        }
+
+        ${(0,a.componentSelector)("ProductCardImageContainer")} {
+            position: inherit;
+            height: 0;
+            min-height: 100%;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+
+            ${(0,a.componentSelector)("ProductCardImagePrimary")},
+            ${(0,a.componentSelector)("ProductCardImageSecondary")} {
+                position: relative;
+                width: auto;
+                max-width: none;
+                height: 0;
+                min-height: 100%;
+                padding: var(--spacers-c48) 0 var(--spacers-c16);
+                object-fit: contain;
+            }
+        }
+    }
+
+    ${(0,a.componentSelector)("WishlistButton")},
+    ${(0,a.componentSelector)("WishlistButtonControlled")},
+    ${(0,a.componentSelector)("IconButtonGhostDark")} {
+        position: absolute;
+        top: var(--spacers-c12);
+        right: var(--spacers-c24);
+    }
+
+    ${(0,a.componentSelector)("ProductCardInfo")} {
+        margin: 0 var(--spacers-c24) var(--spacers-c24);
+        grid-area: info;
+    }
+`,ew=(0,a.createPolymorphicComponentWithIdentifier)(eI,"ProductCardImmersive"),eb={xsmall:"3.3rem",small:"8.7rem",regular:"11.8rem",large:"13.1rem"},ex=d.default.div`
+    display: grid;
+    grid-template-areas:
+        'image productInfo'
+        'priceMinimal priceMinimal';
+    grid-template-columns: ${eb.xsmall} minmax(0, 1fr);
+
+    ${(0,a.componentSelector)("ProductCardHorizontalImageContainer")} {
+        grid-area: image;
+    }
+
+    ${(0,a.componentSelector)("ProductCardHorizontalProductInfo")} {
+        min-width: 0;
+        display: flex;
+        grid-area: productInfo;
+
+        ${(0,a.componentSelector)("LabelSecondaryDark")} {
+            margin: 0 var(--spacers-c4);
+            flex-shrink: 0;
+        }
+
+        ${(0,a.componentSelector)("ProductCardBrandName")} {
+            ${w.footnoteStyles}
+            overflow: hidden;
+            margin-left: var(--spacers-c4);
+            flex-grow: 1;
+            font-weight: unset;
+            text-overflow: ellipsis;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        ${(0,a.componentSelector)("LabelSecondaryDark")} + ${(0,a.componentSelector)("ProductCardBrandName")} {
+            margin-left: unset;
+        }
+    }
+
+    ${(0,a.componentSelector)("PriceMinimal")} {
+        margin-top: -1.8rem; /* stylelint-disable-line */
+        grid-area: priceMinimal;
+    }
+`;(0,a.createPolymorphicComponentWithIdentifier)(ex,"ProductCardHorizontalMini");let ek=d.default.div`
+    display: grid;
+    grid-template-areas:
+        'image productInfo'
+        'image purchaseDetails'
+        'image price';
+    grid-template-columns: ${eb.small} minmax(0, 1fr);
+    column-gap: var(--spacers-c24);
+
+    @media (${({theme:e})=>e.mediaQuery.xs}) {
+        grid-template-areas:
+            'image productInfo'
+            'image purchaseDetails'
+            'image price';
+        grid-template-columns: ${eb.small} minmax(0, 1fr);
+        column-gap: var(--spacers-c12);
+
+        ${(0,a.componentSelector)("ProductCardHorizontalProductInfo")} {
+            margin-bottom: var(--spacers-c16);
+        }
+
+        ${(0,a.componentSelector)("ProductCardInfoClamp")} ${(0,a.componentSelector)("ProductCardDescription")} {
+            overflow: hidden;
+            display: block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    @media (${({theme:e})=>e.mediaQuery.sm}) {
+        grid-template-areas: 'image productInfo purchaseDetails price';
+        grid-template-columns: ${eb.small} minmax(0, 4fr) minmax(0, 4fr) minmax(0, 2fr);
+        column-gap: var(--spacers-c24);
+    }
+
+    @media (${({theme:e})=>e.mediaQuery.md}) {
+        ${(0,a.componentSelector)("ProductCardInfoClamp")} ${(0,a.componentSelector)("ProductCardDescription")} {
+            overflow: unset;
+            display: contents;
+            text-overflow: unset;
+            white-space: unset;
+        }
+    }
+
+    ${(0,a.componentSelector)("PriceDetailed")} {
+        grid-area: price;
+        text-align: end;
+    }
+`,eW=(0,a.createPolymorphicComponentWithIdentifier)(ek,"ProductCardHorizontalSmall"),eH=d.default.div`
+    display: grid;
+    grid-template-areas:
+        'image productInfo'
+        'image purchaseDetails';
+    grid-template-columns: ${eb.small} minmax(0, 1fr);
+    column-gap: var(--spacers-c24);
+
+    ${(0,a.componentSelector)("ProductCardHorizontalImage")} {
+        width: ${eb.small};
+    }
+
+    ${(0,a.componentSelector)("ProductCardHorizontalProductInfo")} {
+        margin-bottom: var(--spacers-c16);
+    }
+
+    ${(0,a.componentSelector)("ProductCardInfoClamp")} {
+        ${(0,a.componentSelector)("ProductCardDescription")} {
+            overflow: hidden;
+            display: block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+`,ez=(0,a.createPolymorphicComponentWithIdentifier)(eH,"ProductCardHorizontalNoPrice"),eD=d.default.div`
+    height: max-content;
+    display: grid;
+    grid-template-areas:
+        'image productInfo'
+        'image purchaseDetails'
+        'image price';
+    grid-template-columns: ${eb.regular} minmax(0, 1fr);
+    column-gap: var(--spacers-c16);
+    row-gap: var(--spacers-c24);
+
+    @media (${({theme:e})=>e.mediaQuery.sm}) {
+        grid-template:
+            auto minmax(var(--spacers-c16), 1fr) auto / ${eb.regular} minmax(0, 6fr)
+            minmax(0, 4fr);
+        grid-template-areas:
+            'image productInfo price'
+            'image purchaseDetails price';
+        column-gap: var(--spacers-c12);
+        row-gap: var(--spacers-c16);
+    }
+
+    @media (${({theme:e})=>e.mediaQuery.md}) {
+        grid-template: auto minmax(var(--spacers-c16), 1fr) auto / ${eb.large} minmax(0, 6fr) minmax(
+                0,
+                4fr
+            );
+        grid-template-areas:
+            'image productInfo price'
+            'image purchaseDetails price';
+        column-gap: var(--spacers-c24);
+        row-gap: var(--spacers-c16);
+    }
+
+    @media (${({theme:e})=>e.mediaQuery.lg}) {
+        grid-template: auto 1fr auto / ${eb.large} minmax(0, 6fr) minmax(0, 4fr);
+        grid-template-areas:
+            'image productInfo price'
+            'image purchaseDetails price';
+        column-gap: var(--spacers-c24);
+        row-gap: var(--spacers-c16);
+    }
+
+    ${(0,a.componentSelector)("PriceDetailed")} {
+        justify-content: flex-end;
+        grid-area: price;
+        text-align: end;
+    }
+`;(0,a.createPolymorphicComponentWithIdentifier)(eD,"ProductCardHorizontal");var eB=o(24773);let ej=(0,s.forwardRef)(({as:e="div",children:r,...o},t)=>(0,m.jsxs)(m.Fragment,{children:[(0,m.jsx)(e,{ref:t,...o,children:r}),(0,m.jsx)(eB.Divider,{})]}));ej.displayName="BaseProductCardGroupHeader";let eQ=(0,d.default)(ej)`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (${({theme:e})=>e.mediaQuery.sm}) {
+        flex-direction: row;
+    }
+
+    ${(0,a.componentSelector)("ProductCardGroupHeaderInfo")} {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        ${(0,a.componentSelector)("Icon")}, ${(0,a.componentSelector)("FlagIcon")} {
+            margin-right: var(--spacers-c6);
+        }
+
+        &:nth-of-type(2) {
+            margin-top: var(--spacers-c12);
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+
+            @media screen and (${({theme:e})=>e.mediaQuery.sm}) {
+                margin-top: 0;
+                margin-right: 0;
+                margin-left: var(--spacers-c6);
+                flex-direction: row;
+                text-align: right;
+
+                ${(0,a.componentSelector)("Icon")}, ${(0,a.componentSelector)("FlagIcon")} {
+                    margin-right: 0;
+                    margin-left: var(--spacers-c6);
+                }
+            }
+        }
+    }
+`;(0,a.createPolymorphicComponentWithIdentifier)(eQ,"ProductCardGroupHeader");let eL=d.default.div`
+    ${c}
+
+    ${(0,a.componentSelector)("ProductCardHeader")} {
+        grid-area: header;
+        position: relative;
+    }
+`,eN=(0,a.createPolymorphicComponentWithIdentifier)(eL,"SuperProductCard"),eE=d.default.div`
+    ${(0,a.componentSelector)("ProductCardInfoSkeleton")}:nth-of-type(2) {
+        width: 70%;
+        margin-top: 3.2rem;
+    }
+
+    ${(0,a.componentSelector)("ProductCardInfoSkeleton")}:nth-of-type(3) {
+        width: 90%;
+        margin-top: var(--spacers-c6);
+    }
+
+    ${(0,a.componentSelector)("ProductCardInfoSkeleton")}:nth-of-type(4) {
+        width: 50%;
+        margin-top: var(--spacers-c12);
+    }
+`,eF=(0,a.createPolymorphicComponentWithIdentifier)(eE,"ProductCardSkeleton");var eA=o(96919);let eM=(0,d.default)(eA.default)`
+    height: 2.2rem;
+`,eR=(0,a.createPolymorphicComponentWithIdentifier)(eM,"ProductCardInfoSkeleton"),eG=(0,d.default)(eA.default)`
+    padding-top: calc(4 / 3 * 100%);
+`,eT=(0,a.createPolymorphicComponentWithIdentifier)(eG,"ProductCardImageSkeleton"),e_=d.default.div`
+    display: grid;
+    grid-template-areas:
+        'image productInfo .'
+        'image purchaseDetails .'
+        'image . price';
+    grid-template-columns: ${eb.regular} auto auto;
+    column-gap: var(--spacers-c24);
+
+    ${(0,a.componentSelector)("ProductCardHorizontalProductInfoSkeleton")} {
+        ${(0,a.componentSelector)("ProductCardInfoSkeleton")} {
+            border-bottom: 0.2rem solid var(--colors-general-brand-ui06);
+
+            &:nth-of-type(1) {
+                width: 60%;
+            }
+
+            &:nth-of-type(2) {
+                width: 100%;
+            }
+        }
+
+        @media (${({theme:e})=>e.mediaQuery.sm}) {
+            ${(0,a.componentSelector)("ProductCardInfoSkeleton")} {
+                &:nth-of-type(1) {
+                    width: 30%;
+                }
+
+                &:nth-of-type(2) {
+                    width: 40%;
+                }
+            }
+        }
+    }
+
+    ${(0,a.componentSelector)("ProductCardHorizontalPurchaseDetailsSkeleton")} {
+        ${(0,a.componentSelector)("ProductCardInfoSkeleton")} {
+            width: 30%;
+            border-top: 0.2rem solid var(--colors-general-brand-ui06);
+
+            &:nth-of-type(3) {
+                display: none;
+            }
+        }
+
+        @media (${({theme:e})=>e.mediaQuery.sm}) {
+            ${(0,a.componentSelector)("ProductCardInfoSkeleton")} {
+                &:nth-of-type(1) {
+                    width: 50%;
+                }
+
+                &:nth-of-type(2) {
+                    width: 30%;
+                }
+
+                &:nth-of-type(3) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    ${(0,a.componentSelector)("ProductCardHorizontalPriceSkeleton")} {
+        ${(0,a.componentSelector)("ProductCardInfoSkeleton")} {
+            border-top: 0.2rem solid var(--colors-general-brand-ui06);
+
+            &:nth-of-type(1) {
+                width: 60%;
+                margin-inline-start: 40%;
+            }
+
+            &:nth-of-type(2) {
+                width: 100%;
+            }
+        }
+
+        @media (${({theme:e})=>e.mediaQuery.sm}) {
+            ${(0,a.componentSelector)("ProductCardInfoSkeleton")} {
+                &:nth-of-type(1) {
+                    width: 40%;
+                    margin-inline-start: 60%;
+                }
+
+                &:nth-of-type(2) {
+                    width: 60%;
+                    margin-inline-start: 40%;
+                }
+            }
+        }
+    }
+
+    @media (${({theme:e})=>e.mediaQuery.sm}) {
+        grid-template-areas:
+            'image productInfo price'
+            'image . price'
+            'image purchaseDetails price';
+        grid-template-columns: ${eb.regular} auto auto;
+    }
+
+    @media (${({theme:e})=>e.mediaQuery.md}) {
+        grid-template-columns: ${eb.large} auto auto;
+    }
+
+    ${(0,a.componentSelector)("ProductCardImageSkeleton")} {
+        grid-area: image;
+    }
+`;(0,a.createPolymorphicComponentWithIdentifier)(e_,"ProductCardHorizontalSkeleton");let eO=d.default.div`
+    grid-area: productInfo;
+`,eJ=(0,a.createPolymorphicComponentWithIdentifier)(eO,"ProductCardHorizontalProductInfoSkeleton"),eZ=d.default.div`
+    grid-area: purchaseDetails;
+`;(0,a.createPolymorphicComponentWithIdentifier)(eZ,"ProductCardHorizontalPurchaseDetailsSkeleton");let eK=d.default.div`
+    align-self: end;
+    grid-area: price;
+    text-align: end;
+`;(0,a.createPolymorphicComponentWithIdentifier)(eK,"ProductCardHorizontalPriceSkeleton");let eV=d.default.div`
+    display: grid;
+    grid-template-areas:
+        'image productInfo .'
+        'image purchaseDetails .'
+        'image . price';
+    grid-template-columns: ${eb.small} auto;
+    column-gap: var(--spacers-c24);
+
+    ${(0,a.componentSelector)("ProductCardHorizontalProductInfoSkeleton")} {
+        margin-bottom: var(--spacers-c16);
+
+        ${(0,a.componentSelector)("ProductCardInfoSkeleton")} {
+            border-bottom: 0.2rem solid var(--colors-general-brand-ui06);
+
+            &:nth-of-type(1) {
+                width: 80%;
+            }
+
+            &:nth-of-type(2) {
+                width: 100%;
+            }
+
+            &:nth-of-type(3) {
+                width: 60%;
+            }
+        }
+
+        @media (${({theme:e})=>e.mediaQuery.sm}) {
+            margin-bottom: unset;
+            ${(0,a.componentSelector)("ProductCardInfoSkeleton")} {
+                &:nth-of-type(1) {
+                    width: 20%;
+                }
+
+                &:nth-of-type(2) {
+                    width: 50%;
+                }
+
+                &:nth-of-type(3) {
+                    width: 10%;
+                }
+            }
+        }
+    }
+
+    ${(0,a.componentSelector)("ProductCardHorizontalPurchaseDetailsSkeleton")} {
+        ${(0,a.componentSelector)("ProductCardInfoSkeleton")} {
+            width: 60%;
+            border-top: 0.2rem solid var(--colors-general-brand-ui06);
+
+            &:nth-of-type(3) {
+                display: none;
+            }
+        }
+
+        @media (${({theme:e})=>e.mediaQuery.sm}) {
+            ${(0,a.componentSelector)("ProductCardInfoSkeleton")} {
+                &:nth-of-type(1) {
+                    width: 50%;
+                }
+
+                &:nth-of-type(2) {
+                    width: 20%;
+                }
+
+                &:nth-of-type(3) {
+                    width: 20%;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    ${(0,a.componentSelector)("ProductCardHorizontalPriceSkeleton")} {
+        align-self: auto;
+        ${(0,a.componentSelector)("ProductCardInfoSkeleton")} {
+            &:nth-of-type(1) {
+                width: 50%;
+                border-top: 0.2rem solid var(--colors-general-brand-ui06);
+                margin-inline-start: 50%;
+            }
+
+            &:nth-of-type(2) {
+                display: none;
+            }
+        }
+
+        @media (${({theme:e})=>e.mediaQuery.sm}) {
+            ${(0,a.componentSelector)("ProductCardInfoSkeleton")} {
+                &:nth-of-type(1) {
+                    width: 20%;
+                    margin-inline-start: 80%;
+                }
+
+                &:nth-of-type(2) {
+                    width: 30%;
+                    display: block;
+                    border-top: 0.2rem solid var(--colors-general-brand-ui06);
+                    margin-inline-start: 70%;
+                }
+            }
+        }
+    }
+
+    @media (${({theme:e})=>e.mediaQuery.sm}) {
+        grid-template-areas: 'image productInfo purchaseDetails price';
+        grid-template-columns: ${eb.small} repeat(2, 4fr) 2fr;
+    }
+
+    ${(0,a.componentSelector)("ProductCardImageSkeleton")} {
+        grid-area: image;
+    }
+`,eY=(0,a.createPolymorphicComponentWithIdentifier)(eV,"ProductCardHorizontalSmallSkeleton"),eq=d.default.div`
+    display: grid;
+    grid-template-areas: 'image productInfo' '. productInfo';
+    grid-template-columns: ${eb.xsmall} auto;
+
+    ${(0,a.componentSelector)("ProductCardHorizontalProductInfoSkeleton")} {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        ${(0,a.componentSelector)("ProductCardInfoSkeleton")} {
+            height: 1.8rem;
+            margin-bottom: 0.4rem;
+
+            &:nth-of-type(1) {
+                width: calc(60% + ${eb.xsmall});
+            }
+
+            &:nth-of-type(2) {
+                width: calc(40% + ${eb.xsmall});
+            }
+
+            &:nth-of-type(3) {
+                width: calc(20% + ${eb.xsmall});
+            }
+        }
+    }
+
+    ${(0,a.componentSelector)("ProductCardImageSkeleton")} {
+        width: ${eb.xsmall};
+        grid-area: image;
+    }
+`;(0,a.createPolymorphicComponentWithIdentifier)(eq,"ProductCardHorizontalMiniSkeleton");let eU=d.default.div`
+    margin-bottom: calc(var(--spacers-c24) + 0.1rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    ${(0,a.componentSelector)("ProductCardGroupHeaderInfoSkeleton")} {
+        &:nth-of-type(1) {
+            margin-bottom: var(--spacers-c12);
+        }
+    }
+
+    @media (${({theme:e})=>e.mediaQuery.sm}) {
+        flex-direction: row;
+
+        ${(0,a.componentSelector)("ProductCardGroupHeaderInfoSkeleton")} {
+            flex: 0 1 33%;
+
+            &:nth-of-type(1) {
+                margin-bottom: 0;
+            }
+
+            &:nth-of-type(2) {
+                margin-left: var(--spacers-c6);
+            }
+        }
+    }
+`;(0,a.createPolymorphicComponentWithIdentifier)(eU,"ProductCardGroupHeaderSkeleton");let eX=(0,d.default)(eA.default)`
+    height: 2.2rem;
+`;(0,a.createPolymorphicComponentWithIdentifier)(eX,"ProductCardGroupHeaderInfoSkeleton")},97613:(e,r,o)=>{let t;o.d(r,{YD:()=>i,_O:()=>L});let a={primary:"primary",secondary:"secondary"},i={click:"click",hover:"hover"},n="tooltip--";var c=o(52903),d=o(2784),l=o(19681),p=o(1232),m=o(52248);let s=(0,m.default)("div")`
+    pointer-events: none;
+`,u=(0,l.createPolymorphicComponentWithIdentifier)(s,"PopperContainer"),f=({activate:e,deactivate:r,onTrigger:o})=>({trigger:a=i.click})=>{let n=()=>window.clearTimeout(t),c=(r,a)=>()=>{n();let i=()=>{e(),null==o||o(r)};a>0?t=window.setTimeout(()=>{i()},a):i()},d=()=>{n(),r()},l={onFocus:c("focus",150),onBlur:d},p={click:{onClick:c(i.click,0),...l},hover:{onMouseEnter:c(i.hover,300),onMouseLeave:d,...l}};return p[a]},g=e=>(r,o)=>r={...r,...e({trigger:o})},h=({triggers:e,activate:r,deactivate:o,onTrigger:t})=>{let a=f({activate:r,deactivate:o,onTrigger:t}),i=Array.isArray(e);return i?e.reduce(g(a),{}):a({trigger:e})};var y=o(28519);let v=(0,d.forwardRef)(({children:e,as:r="span",triggers:o=i.click,onTrigger:t,...a},l)=>{let{isVisible:m,activate:s,deactivate:u,anchorRef:f,layerId:g}=(0,p.sJ)(),v=h({triggers:o,activate:s,deactivate:u,onTrigger:t}),C=(0,y.default)(null!=l?l:null,f),P=e=>{" "===e.key&&(e.preventDefault(),u())},S={onKeyDown:P,tabIndex:0,ref:C,...m&&{"aria-describedby":`${n}${g}`},...v},$=d.Children.toArray(e),I=$[0];if(!I)return null;let w=d.isValidElement(I);return"object"==typeof I&&w?(0,d.cloneElement)(I,{...S,...a}):(0,c.jsx)(r,{...S,...a,children:I})});v.displayName="BaseTooltipAnchor";var C=o(13036);let P=(0,d.forwardRef)(({children:e,as:r=C.Footnote,"aria-label":o,...t},a)=>{let{isVisible:i,deactivate:m,unmount:s,layerId:u}=(0,p.sJ)();(0,d.useEffect)(()=>{let e=e=>("Escape"===e.key||"Esc"===e.key)&&m();return window.document.addEventListener("keydown",e),()=>{window.document.removeEventListener("keydown",e)}},[]);let f=()=>{i||s()},g=`${n}${u}`,h={...i&&{id:g},role:"tooltip"};return(0,c.jsxs)(r,{"data-isopen":i,ref:a,onAnimationEnd:f,...!o&&{...h},...t,children:[e,o&&(0,c.jsx)(l.VisuallyHidden,{...h,children:o})]})});P.displayName="BaseTooltipContent";let S=(0,m.default)(v)`
+    cursor: pointer;
+`,$=(0,l.createPolymorphicComponentWithIdentifier)(S,"TooltipAnchor"),I=(0,d.forwardRef)(({content:e,placement:r=p.Qe.bottom,children:o,triggers:t=i.click,tooltipContent:a=j,popperContainerComponent:n=u,popperOptions:d,disablePortal:l,onTrigger:m,...s},f)=>(0,c.jsx)(p.bM,{content:(0,c.jsx)(a,{...s,ref:f,children:e}),placement:r,popperContainerComponent:n,popperOptions:d,disablePortal:l,children:(0,c.jsx)($,{triggers:t,onTrigger:m,children:o})}));I.displayName="BaseTooltip";let w=(e,r)=>{let o=({children:r,content:o,...t},a)=>(0,c.jsx)(I,{tooltipContent:e,content:o,...t,ref:a,children:r});return(0,l.createPolymorphicComponentWithIdentifier)((0,d.forwardRef)(o),`Tooltip-${r}`)};var b=o(23414);let x=e=>`
+    min-height: 3.4rem;
+    max-width: 22rem;
+    border-radius: var(--borders-corner-s);
+    border: var(--borders-border-s) solid var(--colors-messaging-secondary-enabled-stroke);
+    padding: var(--spacers-c8);
+    margin: var(--spacers-c8);
+    display: flex;
+    align-items: center;
+    cursor: default;
+    ${D(e)}
+
+    &[data-isopen="false"] {
+        ${W(!1)}
+    }
+
+    &[data-isopen="true"] {
+        ${W(!0)}
+    }
+`,k=e=>`
+    animation-duration: var(--motion-functional-duration-m);
+    animation-timing-function: var(--motion-emotional-easing-decelerated);
+    animation-name: ${e?"tooltipEntry":"tooltipExit"};
+
+    @keyframes tooltipEntry {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes tooltipExit {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+`,W=k,H={primary:`
+        background-color: var(--colors-messaging-primary-enabled-surface);
+        color: var(--colors-messaging-primary-enabled-label);
+    `,secondary:`
+        background-color: var(--colors-messaging-secondary-enabled-surface);
+        color: var(--colors-messaging-secondary-enabled-label);
+    `},z=(e=a.primary)=>H[e],D=z,B=e=>{let r=(0,m.default)(P)`
+        ${x(e)}
+    `;return(0,l.createPolymorphicComponentWithIdentifier)(r,(0,b.pascalCase)(`TooltipContent-${e}`))},j=B(a.primary),Q=B(a.secondary),L=w(j,a.primary);w(Q,a.secondary)}}]);
